@@ -7,7 +7,8 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.duo-canvas"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +23,19 @@
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
-      "expo-widgets"
+      [
+        "expo-widgets",
+        {
+          "widgets": [
+            {
+              "name": "CanvasWidget",
+              "displayName": "Duo Canvas",
+              "description": "Last view of your shared drawing",
+              "supportedFamilies": ["systemSmall", "systemMedium"]
+            }
+          ]
+        }
+      ]
     ]
   }
 }
